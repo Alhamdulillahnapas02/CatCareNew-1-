@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <title>CatCare Sign In</title>
+    <style>
+        body {
+            font-family: 'Poppins';
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image: url('cat.jpg'); /* Background image with cat patterns */
+            background-size: cover;
+        }
+
+        .container {
+            display: flex;
+            border-radius: 50px;
+            overflow: hidden;
+        }
+
+        .left-bottom {
+            width: 350px;
+            margin: 40px;
+            padding: 30px;
+            background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent background */
+            backdrop-filter: blur(20px); /* Background blur */
+            border-radius: 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.9);
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent background */
+            backdrop-filter: blur(20px); /* Background blur */
+            padding: 5px;
+            border-radius: 60px;
+            backdrop-filter: blur(10px);
+            width: 410px;
+            transform: translateX(35px);
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.8);
+        }
+
+        .logo img {
+            width: 95px;
+            height: auto;
+        }
+
+        .logo h1 {
+            font-size: 24px;
+            margin: 0;
+        }
+
+        .left h1 {
+            margin: 0;
+            font-size: 36px;
+            color: #000000;
+            text-align: center;
+        }
+
+        .left p {
+            font-size: 16px;
+            color: #000000;
+            margin: 15px 0;
+        }
+
+        .left img.cat-pic {
+            width: 350px; height: auto;
+        }
+
+        .right {
+            padding: 30px;
+            margin: 40px;
+            background-color: rgba(255, 255, 255, 0.6); /* Semi-transparent background */
+            backdrop-filter: blur(20px); /* Background blur */
+            border-radius: 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 600px;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.8);
+        }
+
+        .right h2 {
+            font-size: 24px;
+            color: #000000;
+            margin-bottom: 20px;
+        }
+
+        .right input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            transform: translateX(-11px);
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
+        }
+
+        .right .forgot-password {
+            text-align: right;
+            font-size: 14px;
+            margin-top: 10px;
+            margin-bottom: 20px;
+        }
+
+        .right .forgot-password a {
+            color: rgb(11, 11, 11);
+        }
+
+        .right button {
+            width: 100%;
+            padding: 10px;
+            background-color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            color: rgb(0, 0, 0);
+            font-size: 16px;
+            cursor: pointer;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
+        }
+
+        .right .google-signin {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px;
+            background-color: white;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            margin-top: 20px;
+            cursor: pointer;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
+        }
+
+        .right .google-signin img {
+            width: 20px;
+            margin-right: 10px;
+        }
+
+        .right .register {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 14px;
+            color: #000000;
+        }
+
+        .right .register a {
+            color: #000000;
+        }
+
+        .right .register a:hover {
+            text-decoration: underline;
+        }
+
+        #email, #password, #masuk {
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Left Section -->
+        <div class="left">
+            <div class="logo">
+                <img alt="logokucing" height="200" src="logocat.png" width="auto"/>
+                <h1>CatCare</h1>
+        </div>
+        <div class="left-bottom">
+            <h2><b>MASUK</b></h2>
+        <p><b>Hello, Selamat Datang Kembali!</b><br>
+            Buat akun anda untuk memulai kebaikan</p>
+        <img src="2kucing.jpg" alt="Cute Cats" class="cat-pic">
+        </div>
+        </div>
+
+        <!-- Right Section (Form) -->
+        <div class="right">
+            <form>
+                <label for="email"><b>Email</b></label>
+                <input type="email" id="email" name="email" placeholder="Masukkan email" required>
+
+                <label for="password"><b>Kata Sandi</b></label>
+                <input type="password" id="password" name="password" placeholder="Masukkan kata sandi" required>
+
+                <div class="forgot-password">
+                    <a href="#"><b>Lupa kata sandi?</b></a>
+                </div>
+
+                <button id="masuk" type="submit"><b>Masuk</b></button>
+
+                <div class="google-signin">
+                    <img src="google.png" alt="Google Logo">
+                    <span>Lanjutkan dengan Google</span>
+                </div>
+
+                <div class="register">
+                    Belum punya akun? <a href="#"><b>Buat akun</b></a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>

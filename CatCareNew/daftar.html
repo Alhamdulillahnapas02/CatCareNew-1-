@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <title>CatCare Daftar</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image: url('cat.jpg'); /* Gambar latar belakang dengan pola kucing */
+            background-size: cover;
+        }
+
+        .container {
+            display: flex;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .left-buttom {
+            width: 350px;
+            margin: 40px;
+            padding: 30px;
+            background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent background */
+            backdrop-filter: blur(20px); /* Background blur */
+            border-radius: 50px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.9);
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent background */
+            backdrop-filter: blur(20px); /* Background blur */
+            padding: 10px;
+            border-radius: 50px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.9);
+        }
+
+        .logo img {
+            width: 95px;
+            height: auto;
+        }
+
+        .logo h1 {
+            font-size: 24px;
+            margin: 0;
+        }
+
+        .left h1 {
+            margin: 0;
+            font-size: 36px;
+            color: #000000;
+            text-align: center;
+        }
+
+        .left p {
+            font-size: 12px;
+            color: #000000;
+            margin: 15px 0;
+        }
+
+        .left img.cat-pic {
+            width: 330px; height: auto;
+        }
+        
+        .right {
+            padding: 30px;
+            margin: 40px;
+            width: 500px;
+            background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent background */
+            backdrop-filter: blur(20px); /* Background blur */
+            border-radius: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            
+        }
+
+        .right h2 {
+            font-size: 24px;
+            color: #000000;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .right label {
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #000000;
+        }
+
+        .right input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .right button {
+            width: 100%;
+            padding: 10px;
+            background-color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            color: rgb(0, 0, 0);
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .right .google-signin {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px;
+            background-color: white;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            margin-top: 20px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, border-color 0.3s ease;
+        }
+
+        .right .google-signin:hover {
+            background-color: #f0f0f0;
+            border-color: #999;
+        }
+
+        .right .google-signin img {
+            width: 20px;
+            margin-right: 10px;
+        }
+
+        .right .register {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 14px;
+            color: #000000;
+        }
+
+        .right .register a {
+            color: #000000;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .right .register a:hover {
+            text-decoration: underline;
+        }
+
+        #nama, #email, #password, #daftar, #confirmpassword {
+            border-radius: 10px;
+        }
+
+        /* Responsif untuk perangkat kecil */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+            .left, .right {
+                width: 100%;
+                border-radius: 0;
+            }
+            .left {
+                padding: 20px;
+            }
+            .right {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <!-- Left Section -->
+    <div class="left">
+        <div class="logo">
+            <img alt="logokucing" height="200" src="logocat.png" width="auto"/>
+            <h1>CatCare</h1>
+        </div>
+        <div class="left-buttom">
+            <h2><b>DAFTAR</b></h2>
+        <p><b>Halo, selamat datang!</b><br>
+            Bergabunglah dengan kami untuk memulai kebaikan.</p>
+        <img src="2kucing.jpg" alt="Cute Cats" class="cat-pic">
+        </div>
+    </div>
+
+    <!-- Right Section (Form) -->
+    <div class="right">
+        <form>
+            <!-- Nama Lengkap -->
+            <label for="nama"> <b>Nama Lengkap</b></label>
+            <input type="text" id="nama" name="nama" placeholder="Masukkan nama lengkap" required>
+
+            <!-- Email -->
+            <label for="email"> <b>Email</b></label>
+            <input type="email" id="email" name="email" placeholder="Masukkan email" required>
+
+            <!-- Kata Sandi -->
+            <label for="password"> <b>Kata Sandi</b></label>
+            <input type="password" id="password" name="password" placeholder="Masukkan kata sandi" required>
+
+            <!-- Ketik Ulang Kata Sandi -->
+            <label for="confirm-password"> <b>Ketik Ulang Kata Sandi</b></label>
+            <input type="password" id="confirmpassword" name="confirm-password" placeholder="Ketik ulang kata sandi" required>
+
+            <!-- Tombol Daftar -->
+            <button id="daftar" type="submit"><b>Daftar</b></button>
+
+            <!-- Tombol Daftar dengan Google -->
+            <div class="google-signin">
+                <img src="google.png" alt="Google Logo">
+                <span>Daftar dengan Google</span>
+            </div>
+
+        </form>
+    </div>
+</div>
+
+</body>
+</html>
